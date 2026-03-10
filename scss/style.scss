@@ -1,0 +1,125 @@
+:root {
+  --bs-primary-rgb: 133, 170, 171;
+  --bs-link-color-rgb: 109, 225, 227;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #2d5e5e;
+  --bs-btn-border-color: #2d5e5e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(109, 225, 227);
+  --bs-btn-hover-border-color: rgb(109, 225, 227);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgba(var(--bs-primary-rgb), 0.75);
+  --bs-btn-active-border-color: rgba(var(--bs-primary-rgb), 0.75);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgba(var(--bs-primary-rgb), 0.5);
+  --bs-btn-disabled-border-color: rgba(var(--bs-primary-rgb), 0.5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+.link-primary:focus,
+.link-primary:hover {
+  color: rgb(109, 225, 227) !important;
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+  transition: 0.3s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    scale: 0 1;
+    transition: 0.3s;
+    top: 100%;
+    left: 0;
+    transform-origin: left;
+  }
+
+  &--active {
+    color: rgb(109, 225, 227) !important;
+  }
+
+  &--active:after,
+  &:hover:after {
+    scale: 1 1;
+  }
+}
+
+.offer {
+  background: url("../img/photo-to-main-offer.jpg") no-repeat center/cover;
+  padding-top: 240px;
+  padding-bottom: 160px;
+}
+
+.nav {
+  &__toggle-btn {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 30px;
+  }
+
+  &__toggle-icon {
+    width: 100%;
+    height: 4px;
+    margin: 5px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+    &:nth-child(2) {
+      top: 50%;
+      translate: 0 -50%;
+    }
+    &:nth-child(3) {
+      top: 100%;
+      translate: 0 -100%;
+    }
+  }
+
+  &__list {
+    display: none !important;
+  }
+
+  input:checked ~ &__list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  input:checked ~ &__toggle-btn &__toggle-icon {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: 225deg;
+
+    &:nth-child(2) {
+      rotate: -225deg;
+    }
+  }
+}

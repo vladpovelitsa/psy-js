@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-dark-accent: #2d5e5e;
+        --color-light-accent: #adddde;
+      }
+    </style>
+  </head>
+  <body class="font-[Montserrat] font-medium">
+    <section
+      class="container mx-auto py-15 grid lg:grid-cols-[repeat(3,_minmax(auto,300px))] gap-10 justify-around px-4">
+      <article class="text-center flex items-center flex-col gap-7">
+        <picture>
+          <img src="img/goal.svg" alt="goal icon" />
+        </picture>
+        <h2 class="font-[Oswald] font-bold text-dark-accent text-2xl">
+          Особисті консультації
+        </h2>
+        <p>
+          Досягнення поставленої мети буває складним завданням, але за
+          правильної підтримки немає нічого неможливого
+        </p>
+      </article>
+
+      <article class="text-center flex items-center flex-col gap-7">
+        <picture>
+          <img src="img/family-room.svg" alt="family icon" />
+        </picture>
+        <h2 class="font-[Oswald] font-bold text-dark-accent text-2xl">
+          Сімейна терапія
+        </h2>
+        <p>
+          У будь-якої родини бувають кризові ситуації, тому в такі моменти
+          важливо підтримувати одне одного.
+        </p>
+      </article>
+
+      <article class="text-center flex items-center flex-col gap-7">
+        <picture>
+          <img src="img/network.svg" alt="network icon" />
+        </picture>
+        <h2 class="font-[Oswald] font-bold text-dark-accent text-2xl">
+          Сенситивні групи
+        </h2>
+        <p>
+          Групові заняття — чудове місце, щоб навчитися спілкуватися з
+          оточуючими людьми та розкрити свій потенціал
+        </p>
+      </article>
+    </section>
+
+    <section
+      class="text-white bg-[rgba(0,0,0,.7)] bg-[url(img/briks.jpg)] bg-cover bg-blend-multiply py-15">
+      <div
+        class="container mx-auto grid lg:grid-cols-[minmax(auto,570px)_470px] lg:grid-rows-[auto_1fr_auto] gap-12 justify-between px-4">
+        <h2 class="mb-4 font-[Oswald] font-bold text-4xl">Трохи про мене</h2>
+        <picture class="lg:row-[1_/_span_3] lg:col-[-1_/_2]">
+          <img
+            class="block w-full h-full object-cover object-center"
+            src="img/about-photo.jpg"
+            alt="фото психолога" />
+        </picture>
+        <p>
+          Далеко-далеко за словесними горами країни голосних і приголосних
+          живуть рибні тексти. Вдалині від усіх живуть вони в буквених будинках
+          на березі Семантика великого мовного океану. Маленький струмок Даль
+          дзюрчить по всій країні та забезпечує її всіма необхідними правилами.
+          Ця парадигматична країна, в якій смажені члени речення залітають
+          прямо. Далеко-далеко за словесними горами країни голосних і
+          приголосних живуть рибні тексти. Вдалині від усіх живуть вони в
+          буквених будинках на березі Семантика великого мовного океану.
+          Маленький струмок Даль дзюрчить по всій країні та забезпечує її всіма
+          необхідними правилами. Ця парадигматична країна, в якій смажені члени
+          речення залітають прямо.
+        </p>
+        <div class="flex gap-8">
+          <button
+            name="question"
+            class="cursor-pointer duration-300 border-3 border-dark-accent py-2 px-8 rounded-xl hover:bg-dark-accent">
+            Поставити питання
+          </button>
+          <button
+            name="consultation"
+            class="cursor-pointer duration-300 border-3 border-dark-accent py-2 px-8 rounded-xl bg-dark-accent hover:bg-transparent">
+            Хочу консультацію
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-15">
+      <h2 class="text-center font-bold font-[Oswald] text-3xl mb-10">
+        Записатися на консультацію
+      </h2>
+
+      <form
+        id="consult-form"
+        name="consult-form"
+        class="consult-form grid gap-5 lg:grid-cols-2"
+        action="#">
+        <input
+          class="border-2 rounded-xl py-2 px-4"
+          type="text"
+          name="name"
+          placeholder="Ваше имʼя *"
+          required />
+        <input
+          class="border-2 rounded-xl py-2 px-4"
+          type="tel"
+          name="phone"
+          placeholder="Ваш телефон *"
+          required />
+        <select class="border-2 rounded-xl py-2 px-4" name="theme">
+          <option disabled selected value="">Тема зустрічі *</option>
+          <option value="personal">Особисті консультації</option>
+          <option value="family">Сімейна терапія</option>
+          <option value="sensitive">Сенситивні групи</option>
+        </select>
+        <textarea
+          class="border-2 rounded-xl py-2 px-4 resize-none h-32 lg:col-start-2 lg:row-start-1 lg:row-end-4 lg:h-auto"
+          name="comment"
+          placeholder="Побажання"></textarea>
+
+        <div
+          class="lg:col-start-1 lg:-col-end-1 lg:flex lg:flex-col lg:items-center lg:gap-5">
+          <label>
+            <input type="checkbox" required name="policy" />
+            Я згоден із політикою конфіденційності
+          </label>
+
+          <button
+            class="cursor-pointer duration-300 border-3 border-dark-accent py-2 px-8 rounded-xl bg-dark-accent hover:bg-transparent text-white hover:text-dark-accent lg:min-w-[250px]">
+            Відправити
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="container mx-auto px-4 py-15">
+      <h2 class="text-center font-bold font-[Oswald] text-3xl mb-10">
+        Відгуки клієнтів
+      </h2>
+
+      <div id="slider" class="mx-auto max-w-180">
+        <div class="bg-light-accent py-5 px-6">
+          <div class="flex justify-center items-center gap-4">
+            <picture
+              class="rounded-full flex item-center justify-center overflow-hidden w-20 h-20">
+              <img
+                class="w-full h-full object-cover"
+                src="img/girl.jpg"
+                alt="Марина, 25 років" />
+            </picture>
+            <p>Марина, 25 лет</p>
+          </div>
+          <p class="text-center">
+            Звернулася до Сергія, бо нерви вже були на межі. Ситуація здавалася
+            мені безвихідною – незважаючи на те, що я працюю і навчаюсь. Сама не
+            помітила, як позбулася величезної грудки. Нарешті побачила вихід із
+            ситуації, що склалася, і тепер є надія... Велике спасибі Валентину.
+          </p>
+        </div>
+
+        <div class="bg-light-accent py-5 px-6">
+          <div class="flex justify-center items-center gap-4">
+            <picture
+              class="rounded-full flex item-center justify-center overflow-hidden w-20 h-20">
+              <img
+                class="w-full h-full object-cover"
+                src="img/about-photo.jpg"
+                alt="Марина, 25 років" />
+            </picture>
+            <p>Марина, 25 лет</p>
+          </div>
+          <p class="text-center">
+            Звернулася до Сергія, бо нерви вже були на межі. Ситуація здавалася
+            мені безвихідною – незважаючи на те, що я працюю і навчаюсь. Сама не
+            помітила, як позбулася величезної грудки. Нарешті побачила вихід із
+            ситуації, що склалася, і тепер є надія... Велике спасибі Валентину.
+          </p>
+        </div>
+
+        <div class="bg-light-accent py-5 px-6">
+          <div class="flex justify-center items-center gap-4">
+            <picture
+              class="rounded-full flex item-center justify-center overflow-hidden w-20 h-20">
+              <img
+                class="w-full h-full object-cover"
+                src="img/photo-to-main-offer.jpg"
+                alt="Марина, 25 років" />
+            </picture>
+            <p>Марина, 25 лет</p>
+          </div>
+          <p class="text-center">
+            Звернулася до Сергія, бо нерви вже були на межі. Ситуація здавалася
+            мені безвихідною – незважаючи на те, що я працюю і навчаюсь. Сама не
+            помітила, як позбулася величезної грудки. Нарешті побачила вихід із
+            ситуації, що склалася, і тепер є надія... Велике спасибі Валентину.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/toast.js"></script>
+    <script src="js/slider.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
