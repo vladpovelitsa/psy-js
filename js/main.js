@@ -1,5 +1,5 @@
-import toastLib from "js/toast.js";
-import { initSlider } from "js/slider.js";
+import toastLib from "/js/toast.js";
+import { initSlider } from "/js/slider.js";
 
 const toasts = toastLib("top-left");
 
@@ -13,3 +13,5 @@ const slider = initSlider({
   withDots: false,
   withArrows: false,
 });
+
+export const getSum = (a, b) => a + b;
