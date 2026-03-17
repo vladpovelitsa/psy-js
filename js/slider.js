@@ -1,4 +1,4 @@
-function initSlider({
+export function initSlider({
   selector,
   autoplay = true,
   withDots = false,

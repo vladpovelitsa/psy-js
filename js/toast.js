@@ -1,4 +1,4 @@
-function initToast(position) {
+export default function initToast(position) {
   const typesColorMap = {
     info: "bg-slate-500",
     success: "bg-green-500",
